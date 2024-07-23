@@ -1,0 +1,276 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html, body{
+width: 100vw;
+height: 100vh;
+}
+
+@font-face {
+    font-family: a;
+    src: url(/fonts/jost-variable.ttf);
+}
+@font-face {
+    font-family: b;
+    src: url(/fonts/KFOlCnqEu92Fr1MmEU9fBBc4\ \(1\).ttf);
+}
+@font-face {
+    font-family: c;
+    src: url(/fonts/KFOmCnqEu92Fr1Mu4mxK\ \(1\).ttf);
+}
+
+#main{
+    overflow: hidden;
+    background-color: #0A3CCE;  /*this is to avoid a white line that comes in between of pages*/
+}
+#page1{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+#page1 video{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+#page1 nav{
+    position: absolute;
+    height: 10vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8vh 5vw;
+}
+#right-nav{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1vw;
+}
+#page1 img{
+    height: 7.8vh;
+    margin: -1vw 0 0 -1vw;
+}
+/* this will only work on the buttons directly children to #page1  */
+#right-nav>button{
+    padding: 0.6vw 1vw;
+    border: 1px solid rgba(255, 255, 255, .3);
+    background-color: rgba(0,0,0,0); 
+    border-radius: 50px;
+    color: white;
+    font-family: a;
+    z-index: 3;
+    position: relative;
+    overflow: hidden;
+}
+#right-nav button:hover {
+    border-color: white;
+}
+
+#but::before{
+    content: '';
+    position: absolute;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    z-index: -1;
+    transition: all ease-in-out 0.4s;
+}
+#but:hover::before{
+    top: 0;
+}
+#bounce-text{
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease; 
+}
+#bounce-text:hover{
+    color: #204DD2;
+    animation: bounce 0.5s forwards;
+}
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    30% {
+        transform: translateY(5px); /* Move down */
+    }
+    50% {
+        transform: translateY(-5px); /* Move up */
+    }
+    70% {
+        transform: translateY(2px); /* Slightly down */
+    }
+    100% {
+        transform: translateY(0); /* Back to original position */
+    }
+}
+
+
+#bottom-part{
+    position: absolute;
+    width: 45vw;
+    top: 42vh;
+    left: 9vw;
+    color: white;
+}
+
+#bottom-part h1{
+    font-family: a;
+    font-weight: 100;
+    font-size: 5.5em;
+    line-height: 6rem;
+    margin-bottom: 6vh;
+}
+
+#bottom2{
+    display: flex;
+    width: 40vw;
+    gap: 2vw;
+    align-items: center;
+    justify-content: space-between;
+}
+#bottom2 button{
+    background-color: white; 
+    border-radius: 50px;
+    color: #204DD2;
+    font-family: a;
+    border: none;
+    margin-bottom: -4vh;
+    position: relative;
+    z-index: 3;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 1vw 3vw;
+    width: 15rem;
+}
+#bottom2 h3{
+    font-family: a;
+    font-weight: 100;
+}
+#bottom2 button::before{
+    content: '';
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    transition: all ease-in-out 0.4s;
+    z-index: -1;
+}
+#bottom2 button:hover::before{
+    top: 0;
+}
+#bottom2 button:hover{
+    color: white;
+}
+
+
+
+
+
+#page2{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: #0A3CCE;
+    font-family: a;
+    padding: 22vh 9vw;
+}
+
+#page2 h3{
+    font-weight: 100;
+    font-size: 2.5vh;
+    color: #FFFFFF;
+}
+
+#page2 h1{
+    font-weight: 100;
+    font-size: 9vh;
+    font-family: a;
+    line-height: 1.2;
+    letter-spacing: -.02em;
+    margin-top: 6vh;
+    letter-spacing: 1;
+    color: #3B63D7;
+    white-space: normal; /* Ensure natural word wrapping */
+            overflow-wrap: break-word;
+}
+
+
+
+
+#page3{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+canvas{
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+
+
+#page4{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: #0A3CCE;
+    font-family: a;
+    padding: 13vh 9vw;
+}
+#page4 h3{
+    font-weight: 100;
+    font-size: 2.5vh;
+    color: #FFFFFF;
+}
+
+#page4 h1{
+    font-weight: 100;
+    font-size: 9vh;
+    font-family: a;
+    line-height: 1.1;
+    letter-spacing: -.01em;
+    margin-top: 4vh;
+    letter-spacing: 1;
+    color: #3B63D7;
+}
+
+
+#page5{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+
+#page6{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: #0A3CCE;
+    font-family: a;
+    padding: 18vh 9.5vw;
+}
+#page6 h3{
+    font-weight: 100;
+    font-size: 2.6vh;
+    color: #FFFFFF;
+}
+
+#page6 h1{
+    font-weight: 100;
+    font-size: 9vh;
+    font-family: a;
+    line-height: 1.2;
+    letter-spacing: -.02em;
+    margin-top: 4.5vh;
+    letter-spacing: 1;
+    color: #3B63D7;
+}
