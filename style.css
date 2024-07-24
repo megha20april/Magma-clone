@@ -303,3 +303,59 @@ canvas{
     border: 1px solid rgba(255, 255, 255, 0.5);
     background: rgba(10, 60, 206, .5);
 }
+
+
+#page8{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+#page8 video{
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;
+}
+
+#page8-bottom{
+    position: absolute;
+    font-family: a;
+    bottom: 13%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+#page8-bottom h1{
+    color: white;
+    font-weight: 100;
+    font-size: 5.5em;
+}
+#page8-bottom button{
+    background-color: white; 
+    border-radius: 50px;
+    color: #204DD2;
+    border: none;
+    z-index: 3;
+    position: relative;
+    overflow: hidden;
+    padding: 1vw 2vw;
+    width: 10rem;
+    white-space: nowrap;
+}
+#page8-bottom button::before{
+    content: '';
+    position: absolute;
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    transition: all ease-in-out 0.4s;
+    z-index: -1;
+}
+#page8-bottom button:hover::before{
+    top: 0;
+}
+#page8-bottom button:hover{
+    color: white;
+}
