@@ -632,3 +632,178 @@ gsap.to("#load-circle",{
   },
   scale: 4,
 })
+
+gsap.to('#page9',{
+  scrollTrigger :{
+    trigger:"#page9",
+    start: "50% bottom",
+    end: "bottom top",
+    scrub: .1,
+  },
+  backgroundColor: "#032A9A",
+})
+
+
+function canvas4(){
+  const canvas = document.querySelector("#page10>canvas");
+const context = canvas.getContext("2d");
+
+canvas.width = window.innerWidth ;
+canvas.height = window.innerHeight;
+
+
+
+
+function files(index) {
+  var data = `
+https://thisismagma.com/assets/home/roadmap/seq/1.webp
+https://thisismagma.com/assets/home/roadmap/seq/2.webp
+https://thisismagma.com/assets/home/roadmap/seq/3.webp
+https://thisismagma.com/assets/home/roadmap/seq/4.webp
+https://thisismagma.com/assets/home/roadmap/seq/5.webp
+https://thisismagma.com/assets/home/roadmap/seq/6.webp
+https://thisismagma.com/assets/home/roadmap/seq/7.webp
+https://thisismagma.com/assets/home/roadmap/seq/8.webp
+https://thisismagma.com/assets/home/roadmap/seq/9.webp
+https://thisismagma.com/assets/home/roadmap/seq/10.webp
+https://thisismagma.com/assets/home/roadmap/seq/11.webp
+https://thisismagma.com/assets/home/roadmap/seq/12.webp
+https://thisismagma.com/assets/home/roadmap/seq/13.webp
+https://thisismagma.com/assets/home/roadmap/seq/14.webp
+https://thisismagma.com/assets/home/roadmap/seq/15.webp
+https://thisismagma.com/assets/home/roadmap/seq/16.webp
+https://thisismagma.com/assets/home/roadmap/seq/17.webp
+https://thisismagma.com/assets/home/roadmap/seq/18.webp
+https://thisismagma.com/assets/home/roadmap/seq/19.webp
+https://thisismagma.com/assets/home/roadmap/seq/20.webp
+https://thisismagma.com/assets/home/roadmap/seq/21.webp
+https://thisismagma.com/assets/home/roadmap/seq/22.webp
+https://thisismagma.com/assets/home/roadmap/seq/23.webp
+https://thisismagma.com/assets/home/roadmap/seq/24.webp
+https://thisismagma.com/assets/home/roadmap/seq/25.webp
+https://thisismagma.com/assets/home/roadmap/seq/26.webp
+https://thisismagma.com/assets/home/roadmap/seq/27.webp
+https://thisismagma.com/assets/home/roadmap/seq/28.webp
+https://thisismagma.com/assets/home/roadmap/seq/29.webp
+https://thisismagma.com/assets/home/roadmap/seq/30.webp
+https://thisismagma.com/assets/home/roadmap/seq/31.webp
+https://thisismagma.com/assets/home/roadmap/seq/32.webp
+https://thisismagma.com/assets/home/roadmap/seq/33.webp
+https://thisismagma.com/assets/home/roadmap/seq/34.webp
+https://thisismagma.com/assets/home/roadmap/seq/35.webp
+https://thisismagma.com/assets/home/roadmap/seq/36.webp
+https://thisismagma.com/assets/home/roadmap/seq/37.webp
+https://thisismagma.com/assets/home/roadmap/seq/38.webp
+https://thisismagma.com/assets/home/roadmap/seq/39.webp
+https://thisismagma.com/assets/home/roadmap/seq/40.webp
+https://thisismagma.com/assets/home/roadmap/seq/41.webp
+https://thisismagma.com/assets/home/roadmap/seq/42.webp
+https://thisismagma.com/assets/home/roadmap/seq/43.webp
+https://thisismagma.com/assets/home/roadmap/seq/44.webp
+https://thisismagma.com/assets/home/roadmap/seq/45.webp
+https://thisismagma.com/assets/home/roadmap/seq/46.webp
+https://thisismagma.com/assets/home/roadmap/seq/47.webp
+https://thisismagma.com/assets/home/roadmap/seq/48.webp
+https://thisismagma.com/assets/home/roadmap/seq/49.webp
+https://thisismagma.com/assets/home/roadmap/seq/50.webp
+https://thisismagma.com/assets/home/roadmap/seq/51.webp
+https://thisismagma.com/assets/home/roadmap/seq/52.webp
+https://thisismagma.com/assets/home/roadmap/seq/53.webp
+https://thisismagma.com/assets/home/roadmap/seq/54.webp
+https://thisismagma.com/assets/home/roadmap/seq/55.webp
+https://thisismagma.com/assets/home/roadmap/seq/56.webp
+https://thisismagma.com/assets/home/roadmap/seq/57.webp
+https://thisismagma.com/assets/home/roadmap/seq/58.webp
+https://thisismagma.com/assets/home/roadmap/seq/59.webp
+https://thisismagma.com/assets/home/roadmap/seq/60.webp
+https://thisismagma.com/assets/home/roadmap/seq/61.webp
+https://thisismagma.com/assets/home/roadmap/seq/62.webp
+https://thisismagma.com/assets/home/roadmap/seq/63.webp
+https://thisismagma.com/assets/home/roadmap/seq/64.webp
+https://thisismagma.com/assets/home/roadmap/seq/65.webp
+https://thisismagma.com/assets/home/roadmap/seq/66.webp
+https://thisismagma.com/assets/home/roadmap/seq/67.webp
+https://thisismagma.com/assets/home/roadmap/seq/68.webp
+https://thisismagma.com/assets/home/roadmap/seq/69.webp
+https://thisismagma.com/assets/home/roadmap/seq/70.webp
+https://thisismagma.com/assets/home/roadmap/seq/71.webp
+https://thisismagma.com/assets/home/roadmap/seq/72.webp
+https://thisismagma.com/assets/home/roadmap/seq/73.webp
+https://thisismagma.com/assets/home/roadmap/seq/74.webp
+https://thisismagma.com/assets/home/roadmap/seq/75.webp
+ `;
+  return data.split("\n")[index];
+}
+
+const frameCount = 75;
+
+const images = [];
+const imageSeq = {
+  frame: 1,
+};
+
+for (let i = 0; i < frameCount; i++) {
+  const img = new Image();
+  img.src = files(i);
+  images.push(img);
+}
+
+window.addEventListener("resize", function () {
+  const img = new Image();
+        img.src = files(0); // Use the first image to determine the size
+        img.onload = () => {
+            canvas.width = img.width;
+            canvas.height = img.height;
+            render();
+        };
+});
+
+gsap.to(imageSeq, {
+  frame: frameCount - 1,
+  snap: "frame",
+  ease: `none`,
+  scrollTrigger: {
+    scrub: 0.15,
+    trigger: `#page10>canvas`,
+    //   set start end according to preference
+    start: `top top`,
+    end: `400% top`,
+    scroller: `#main`,
+  },
+  onUpdate: render,
+});
+
+images[1].onload = render;
+
+function render() {
+  scaleImage(images[imageSeq.frame], context);
+}
+
+function scaleImage(img, ctx) {
+  var canvas = ctx.canvas;
+ 
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.drawImage(
+    img,
+    0,
+    0,
+    img.width,
+    img.height,
+    // 0,
+    // 50,
+    // img.width * ratio,
+    // img.height * ratio
+  );
+}
+ScrollTrigger.create({
+
+  trigger: "#page10",
+  pin: true,
+  // markers:true,
+  scroller: `#main`,
+//   set start end according to preference
+  start: `top top`,
+  end: `400% top`,
+});
+}
+canvas4();
